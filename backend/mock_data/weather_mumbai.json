@@ -1,0 +1,139 @@
+{
+  "cityName": "Mumbai",
+  "stateName": "Maharashtra",
+  "latitude": 18.922,
+  "longitude": 72.8347,
+  "isCoastal": true,
+  "lastUpdated": "2026-09-13T16:30:00.000Z",
+  "current": {
+    "temperature": 29.8,
+    "feelsLike": 34.2,
+    "condition": "Scattered Showers",
+    "humidity": 82,
+    "uvIndex": 5.4,
+    "windSpeedKmh": 24.0,
+    "windDirection": "WSW",
+    "visibilityKm": 5.0,
+    "pressureHpa": 1008,
+    "sunrise": "06:24 AM",
+    "sunset": "06:43 PM",
+    "tempMax": 31.0,
+    "tempMin": 26.0
+  },
+  "aqi": {
+    "aqi": 64,
+    "pm25": 19.5,
+    "pm10": 48.0,
+    "no2": 21.0,
+    "so2": 9.0,
+    "co": 0.7,
+    "o3": 20.0,
+    "category": "Satisfactory",
+    "healthAdvisory": "Air quality is acceptable; great day for outdoor activities by the sea."
+  },
+  "pollen": {
+    "count": 18,
+    "level": "Low",
+    "treePollen": "Low",
+    "grassPollen": "Low",
+    "weedPollen": "Low"
+  },
+  "tideSea": {
+    "seaCondition": "Moderate to Rough",
+    "waveHeightM": 2.3,
+    "waterTempC": 28.2,
+    "highTideTime": "02:15 PM (4.12m)",
+    "lowTideTime": "08:35 PM (0.85m)",
+    "nextTideType": "High Tide (4.12m)",
+    "nextTideCountdown": "in 1 hr 45 min"
+  },
+  "outdoorFitness": {
+    "bestRunningHours": [
+      {
+        "timeWindow": "06:00 AM - 07:30 AM",
+        "score": 91,
+        "rating": "Optimal",
+        "reason": "Breezy Marine Drive promenade, clean coastal air (AQI 64)."
+      },
+      {
+        "timeWindow": "06:30 PM - 08:00 PM",
+        "score": 84,
+        "rating": "Very Good",
+        "reason": "Pleasant onshore sea breeze (24 km/h)."
+      }
+    ],
+    "goldenHourMorning": "06:24 AM - 07:05 AM",
+    "goldenHourEvening": "06:05 PM - 06:43 PM",
+    "heatColdAlert": "High humidity caution: Hydrate with electrolytes during workouts."
+  },
+  "traveler": {
+    "savedDestinations": [
+      {
+        "city": "Goa",
+        "temp": 28.0,
+        "condition": "Heavy Rain",
+        "rainProbability": 85,
+        "alert": "Squally monsoon alert on coastline"
+      },
+      {
+        "city": "Pune",
+        "temp": 26.5,
+        "condition": "Passing Showers",
+        "rainProbability": 40,
+        "alert": null
+      }
+    ],
+    "packingSuggestions": [
+      "High rain probability (60%): Carry sturdy umbrella and waterproof bag cover",
+      "High humidity (82%): Breathable quick-dry synthetic/cotton clothing",
+      "Beach footwear: Non-slip sandals recommended for wet promenades"
+    ]
+  },
+  "parentsFamilies": {
+    "morningCommute": {
+      "title": "Morning School Bus Window",
+      "timeRange": "07:00 AM - 09:00 AM",
+      "temp": 28.0,
+      "rainProbability": 45,
+      "condition": "Passing Drizzle",
+      "advisory": "Expect minor delays near water-logging prone junctions."
+    },
+    "afternoonCommute": {
+      "title": "Afternoon Return Window",
+      "timeRange": "02:00 PM - 04:00 PM",
+      "temp": 30.5,
+      "rainProbability": 60,
+      "condition": "High Tide + Showers",
+      "advisory": "Coinciding with 4.12m high tide at 02:15 PM. Keep buffer time."
+    },
+    "outdoorPlaySafety": "Wet ground cautions; indoor play recommended during peak high tide.",
+    "alert": "High Tide Warning: Sea waves may breach Marine Drive at 02:15 PM."
+  },
+  "agriculture": {
+    "soilMoisturePercent": 88,
+    "rainfallPrediction48hMm": 42.0,
+    "frostAlert": false,
+    "heatwaveAlert": false,
+    "seasonalCropTip": "Konkan coastal belt: Ensure proper drainage channels in rice paddies.",
+    "recommendedAction": "Avoid fertilizer broadcasting ahead of forecasted 40mm rain."
+  },
+  "commuter": {
+    "trafficDelayMins": 35,
+    "trafficStatus": "Severe Delay (+35 min)",
+    "visibilityMeters": 4500,
+    "fogStormAlert": "Western Express Highway slow moving due to downpours.",
+    "routeSafety": "Caution Advised"
+  },
+  "eventPlanner": {
+    "extendedForecast": [
+      {"day": "Today", "date": "Sep 13", "tempMax": 31, "tempMin": 26, "condition": "Passing Rain", "rainProbability": 65, "comfortScore": 71},
+      {"day": "Sun", "date": "Sep 14", "tempMax": 30, "tempMin": 25, "condition": "Heavy Showers", "rainProbability": 80, "comfortScore": 62},
+      {"day": "Mon", "date": "Sep 15", "tempMax": 29, "tempMin": 25, "condition": "Rain", "rainProbability": 75, "comfortScore": 66},
+      {"day": "Tue", "date": "Sep 16", "tempMax": 31, "tempMin": 26, "condition": "Partly Cloudy", "rainProbability": 40, "comfortScore": 75},
+      {"day": "Wed", "date": "Sep 17", "tempMax": 32, "tempMin": 26, "condition": "Humid & Sunny", "rainProbability": 25, "comfortScore": 74}
+    ],
+    "comfortIndexScore": 71,
+    "comfortCategory": "Moderate Comfort (Breezy)",
+    "comfortFormulaBreakdown": "High humidity (82%) balanced by strong coastal winds (24 km/h)."
+  }
+}

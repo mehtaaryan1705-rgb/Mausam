@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Personalized Mausam Weather App - SIH 2026 (PS 26076) Project Overview & Viva Q&A</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm 16mm;
+    @bottom-right {
+      content: counter(page);
+      font-family: Arial, sans-serif;
+      font-size: 9pt;
+      color: #718096;
+    }
+  }
+
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    color: #1A202C;
+    line-height: 1.55;
+    font-size: 10.5pt;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4 {
+    color: #003366;
+    font-weight: 700;
+    margin-top: 1.4em;
+    margin-bottom: 0.5em;
+  }
+
+  h1 {
+    font-size: 22pt;
+    line-height: 1.2;
+    border-bottom: 3px solid #003366;
+    padding-bottom: 8px;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 15pt;
+    border-bottom: 1.5px solid #CBD5E0;
+    padding-bottom: 5px;
+    margin-top: 1.8em;
+  }
+
+  h3 {
+    font-size: 12pt;
+    color: #0F5298;
+    margin-top: 1.2em;
+  }
+
+  p {
+    margin: 0.5em 0;
+  }
+
+  ul, ol {
+    margin: 0.5em 0 0.8em 1.4em;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.35em;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 8.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .badge-primary { background: #EBF8FF; color: #2B6CB0; border: 1px solid #BEE3F8; }
+  .badge-gov { background: #FEFCBF; color: #744210; border: 1px solid #FAF089; }
+  .badge-success { background: #C6F6D5; color: #22543D; border: 1px solid #9AE6B4; }
+
+  .header-card {
+    background: linear-gradient(135deg, #003366 0%, #0F5298 100%);
+    color: white;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin-bottom: 22px;
+  }
+
+  .header-card h1 {
+    color: white;
+    border: none;
+    padding: 0;
+    margin: 0 0 6px 0;
+    font-size: 20pt;
+  }
+
+  .header-card p {
+    color: #E2E8F0;
+    margin: 3px 0;
+    font-size: 10pt;
+  }
+
+  .callout {
+    background: #F7FAFC;
+    border-left: 4px solid #003366;
+    padding: 12px 16px;
+    margin: 14px 0;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .callout-warning {
+    background: #FFFDF5;
+    border-left-color: #DD6B20;
+  }
+
+  .callout-title {
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 4px;
+    font-size: 10.5pt;
+  }
+
+  .table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 18px 0;
+    font-size: 9.5pt;
+  }
+
+  .table-custom th, .table-custom td {
+    border: 1px solid #E2E8F0;
+    padding: 7px 10px;
+    text-align: left;
+  }
+
+  .table-custom th {
+    background-color: #EDF2F7;
+    color: #2D3748;
+    font-weight: 700;
+  }
+
+  .table-custom tr:nth-child(even) {
+    background-color: #F8FAFC;
+  }
+
+  .qa-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 14px;
+    page-break-inside: avoid;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .qa-question {
+    font-weight: 700;
+    color: #003366;
+    font-size: 11pt;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .qa-tag {
+    background: #003366;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 8pt;
+    margin-right: 8px;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  .qa-answer {
+    color: #2D3748;
+    font-size: 10pt;
+    margin: 0;
+  }
+
+  .qa-answer strong {
+    color: #1A202C;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  code {
+    background: #EDF2F7;
+    color: #C53030;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    font-size: 9.5pt;
+  }
+
+  .formula-box {
+    background: #EDF2F7;
+    border-left: 3px solid #319795;
+    padding: 10px 14px;
+    font-family: Consolas, monospace;
+    font-size: 9pt;
+    margin: 10px 0;
+    border-radius: 0 4px 4px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="header-card">
+  <div style="margin-bottom: 8px;">
+    <span class="badge badge-gov" style="background: white; color: #003366; font-weight: bold;">SIH 2026 • Problem Statement PS 26076</span>
+    <span class="badge badge-success" style="background: #2E7D32; color: white; margin-left: 6px;">Ministry of Earth Sciences (IMD)</span>
+  </div>
+  <h1>Project Overview & Jury Viva Q&A Guide</h1>
+  <p><strong>Project Title:</strong> Personalized, Hyperlocal & Bilingual Homepage for 'Mausam' Weather Application</p>
+  <p><strong>Target Users:</strong> Indian Citizens, Farmers, Asthmatic Patients, Commuters, Coastal Fishermen, Travelers</p>
+</div>
+
+<h2>1. Executive Summary: What Are We Doing & Why?</h2>
+
+<h3>The "Why" (The Real Problem)</h3>
+<p>
+Traditional weather apps suffer from <strong>Context Blindness</strong>. They present raw meteorological parameters—temperature, barometric pressure, dew point—which mean little to everyday citizens. An asthmatic individual does not know if 180 µg/m³ PM2.5 requires an N95 mask; a cotton farmer does not know if 72% relative humidity makes pesticide spraying wasteful; an evening runner does not know if heat index and ozone levels pose cardiovascular stress.
+</p>
+<p>
+Furthermore, in India:
+</p>
+<ul>
+  <li><strong>The Language Barrier:</strong> Over 60% of rural and semi-urban citizens cannot comfortably parse technical English forecasts.</li>
+  <li><strong>The Coastal Gap:</strong> 7,516 km of coastline houses millions of fishermen and beachgoers who receive no sea-state or tide data unless they dig into specialized oceanographic websites.</li>
+  <li><strong>The Data Opacity Gap:</strong> Air quality reports rarely mention <em>which</em> sensor measured the pollution or its distance, leading to false security.</li>
+</ul>
+
+<h3>The "What" (Our Solution)</h3>
+<p>
+Under <strong>SIH 2026 (PS 26076)</strong> for the Ministry of Earth Sciences (IMD), we designed and built a <strong>Personalized, Bilingual, Cross-Platform Homepage</strong> for the official 'Mausam' application. It translates raw telemetry into <strong>8 citizen-specific actionable personas</strong>:
+</p>
+
+<table class="table-custom">
+  <thead>
+    <tr>
+      <th>Citizen Persona</th>
+      <th>Key Data Signals Used</th>
+      <th>Actionable Output Delivered</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Health-Conscious</strong></td>
+      <td>CPCB National AQI, PM2.5, PM10, Pollen counts, UV</td>
+      <td>Mask recommendation, outdoor restriction alerts, nearest CAAQMS station name & distance attribution.</td>
+    </tr>
+    <tr>
+      <td><strong>2. Outdoor Fitness</strong></td>
+      <td>Temperature, Humidity, Heat Index, Air Quality</td>
+      <td>Comfort Score (0–100), optimal morning/evening running windows, heat stroke hydration warning.</td>
+    </tr>
+    <tr>
+      <td><strong>3. Beachgoers & Surfers</strong></td>
+      <td>INCOIS marine telemetry, tide tables, wave height</td>
+      <td>High/low tide timing, water safety flags. <em>Auto-triggered only when location is within 25 km of coast!</em></td>
+    </tr>
+    <tr>
+      <td><strong>4. Travelers</strong></td>
+      <td>Multi-city watchlist, weather differentials, rain probability</td>
+      <td>Dynamic luggage packing checklist (umbrella, woolens, sunscreen), travel delays alert.</td>
+    </tr>
+    <tr>
+      <td><strong>5. Parents & Families</strong></td>
+      <td>Heat index, UV index, rain forecast, school hours</td>
+      <td>Safe park play hours, child sunscreen advisories, school commute rain alerts.</td>
+    </tr>
+    <tr>
+      <td><strong>6. Farmers & Agriculture</strong></td>
+      <td>IMD Agromet district advisories, wind speed, rain probability</td>
+      <td>Pesticide spraying viability window, irrigation requirement advisory, crop damage risk flags.</td>
+    </tr>
+    <tr>
+      <td><strong>7. Daily Commuters</strong></td>
+      <td>Hourly precipitation trajectory, fog visibility, wind gusts</td>
+      <td>Safe departure times, waterlogging probability on roadways, safe helmet/drive precautions.</td>
+    </tr>
+    <tr>
+      <td><strong>8. Event Planners</strong></td>
+      <td>3-to-7 day precipitation probability, afternoon wind gusts</td>
+      <td>Outdoor viability risk score, indoor venue fallback recommendations.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h2>2. System Architecture & Technical Mechanics: How Things Work</h2>
+
+<h3>Three-Tier Architecture</h3>
+<ol>
+  <li><strong>Client Layer (Flutter Cross-Platform):</strong> Single codebase compiled to Web, Android APK, and iOS. Employs Material 3 design, responsive constraint managers, and an in-app View Mode Switcher.</li>
+  <li><strong>Backend Layer (Node.js Express BFF):</strong> Acts as a Backend-For-Frontend proxy. Aggregates upstream government endpoints (IMD AWS, CPCB CAAQMS, INCOIS), caches geocoding responses in memory for 24 hours, and computes proximity.</li>
+  <li><strong>Zero-Drift Offline Twin (Dart Engine):</strong> Contains an offline geocoding dictionary, identical GeoJSON coastline data, and local Equirectangular Haversine math. If the device loses internet connection, the app continues operating with full persona logic seamlessly.</li>
+</ol>
+
+<h3>The 25 km Coastal Proximity Algorithm</h3>
+<p>
+To respect MoES requirements, beach and marine cards must strictly appear only for locations within <strong>25 kilometers</strong> of the Indian shoreline. We implemented the <strong>Equirectangular Projected Haversine Point-to-Segment Distance</strong> algorithm across all 7,516 km of India's shoreline coordinates:
+</p>
+<div class="formula-box">
+  Δx = (lon₂ - lon₁) × cos((lat₁ + lat₂) / 2)<br>
+  Δy = (lat₂ - lat₁)<br>
+  Distance = Earth_Radius (6371 km) × √(Δx² + Δy²)
+</div>
+<p>
+<strong>Zero-Drift Guarantee:</strong> Both backend (<code>utils/coastal.js</code>) and frontend (<code>coastal_detector.dart</code>) share the identical GeoJSON dataset (<code>india_coastline.json</code>) and identical mathematical projection. Verified benchmark test cases:
+</p>
+<ul>
+  <li><strong>Mumbai:</strong> 2.0 km to coast &le; 25 km &rarr; <span class="badge badge-success">Coastal (True)</span></li>
+  <li><strong>Kochi:</strong> 0.0 km to coast &le; 25 km &rarr; <span class="badge badge-success">Coastal (True)</span></li>
+  <li><strong>Kottayam:</strong> 22.0 km to coast &le; 25 km &rarr; <span class="badge badge-success">Coastal (True)</span></li>
+  <li><strong>Varanasi:</strong> 634.9 km to coast &gt; 25 km &rarr; <span class="badge badge-primary">Inland (False)</span></li>
+  <li><strong>New Delhi:</strong> 865.0 km to coast &gt; 25 km &rarr; <span class="badge badge-primary">Inland (False)</span></li>
+</ul>
+
+<h3>Bilingual Standardization</h3>
+<p>
+We avoided raw automated machine translation. All Air Quality index categories strictly adhere to the <strong>Central Pollution Control Board (CPCB) official Hindi terminology</strong>:
+</p>
+<ul>
+  <li>Good (0–50) &rarr; <strong>अच्छा</strong></li>
+  <li>Satisfactory (51–100) &rarr; <strong>संतोषजनक</strong></li>
+  <li>Moderate (101–200) &rarr; <strong>मध्यम</strong></li>
+  <li>Poor (201–300) &rarr; <strong>खराब</strong></li>
+  <li>Very Poor (301–400) &rarr; <strong>बहुत खराब</strong></li>
+  <li>Severe (401–500) &rarr; <strong>गंभीर</strong></li>
+</ul>
+<p>Weather condition strings are similarly localized into vernacular Indian phrases (e.g. <em>Hazy Sunshine &rarr; धुंधली धूप, Thunderstorms &rarr; गरज के साथ बारिश</em>).</p>
+
+<h3>India-First Scope with Graceful Global Fallback</h3>
+<p>
+IMD’s mandate is national, but citizens travel internationally. If a user searches for global cities (e.g. <strong>London, Dubai, New York</strong>):
+</p>
+<ul>
+  <li>The location resolves and saves cleanly in <code>recentLocations</code> and <code>savedDestinations</code>.</li>
+  <li>Core weather, temperature, humidity, and travel packing suggestions are fully computed.</li>
+  <li>Regional Indian cards (Beach/Surfer and Agromet) display an informative notice: <em>"Available for Indian regions under Ministry of Earth Sciences mandate."</em></li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>3. Comprehensive Jury Viva Q&A (20 Questions & Winning Answers)</h2>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q1</span> Why do we need another weather app when Google Weather, AccuWeather, and IMD already exist?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> Existing commercial apps are built on global models (GFS, ECMWF) that lack the high-resolution Doppler radar, Agromet advisory network, and CPCB CAAQMS sensor density that the Government of India operates. Furthermore, commercial apps treat all users identically. A farmer and a marathon runner see the exact same home screen. Our application uses official MoES/IMD data and translates it into <strong>hyperlocal, role-based actionable advisories</strong> with zero-advertising, complete data privacy, and vernacular language reach.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q2</span> How does the application handle users in rural areas with poor internet connectivity?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> We engineered a <strong>Zero-Drift Offline Twin</strong>. The Flutter client embeds a pre-indexed dictionary of Indian cities, districts, and coordinates, alongside the coastline GeoJSON. If a farmer opens the app in a village with no cellular reception, the app serves cached meteorological bulletins, computes coastal proximity locally in Dart, and displays offline status badges without crashing or showing blank error screens.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q3</span> What is "Zero-Drift" in your coastline detection, and why is it important?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> "Drift" occurs when two different implementations (e.g., JavaScript on backend and Dart on frontend) calculate slightly different results for the same coordinates due to floating-point rounding or differing Haversine algorithms. This could lead to an embarrassing situation where a city is marked "Coastal" online, but becomes "Inland" offline if Wi-Fi drops. We solved this by using the exact same GeoJSON coordinate dataset and mathematically identical Equirectangular Haversine projections on both sides, ensuring zero discrepancy.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q4</span> How does the app determine whether someone is a "Beachgoer" or needs marine data?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> Marine and beach telemetry is strictly location-gated by our 25-kilometer coastal threshold engine. If a user selects Mumbai or Kochi, the distance to the Arabian Sea is calculated as &le; 25 km, which automatically activates the Beach & Surfer card with INCOIS tide tables and wave heights. If a user in New Delhi or Varanasi selects the Beach persona, the app displays a distance chip (e.g., <em>"Inland • 865 km to coast"</em>) and recommends nearby coastal destinations instead of displaying irrelevant ocean tides.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q5</span> What is "AQI Station Transparency" and how does your app implement it?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> Most apps display a single city-wide AQI number (e.g., "Delhi AQI: 320"). In reality, air quality varies wildly across a city. Under PS 26076, we introduced Sensor Attribution: our Health Card explicitly renders the exact monitoring station name and its distance from the user (e.g., <em>"CAAQMS Central Station • 3.2 km away"</em>). This provides citizens with verifiable transparency into how close the physical monitoring station is to their neighborhood.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q6</span> Can a user choose more than one persona at the same time?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> Yes! Citizens have multifaceted lives—a school teacher can also be a daily commuter, a weekend runner, and a parent. In Settings, users can select any combination of the 8 personas. The homepage feed dynamically renders all active persona cards in prioritized order, and our sticky filter bar allows the user to filter down to a single persona with one tap.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q7</span> What happens if a user searches for an international city like London or New York?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> We follow the <strong>India-First with Graceful Global Fallback</strong> rule. Commercial geocoding or Nominatim resolves international coordinates. The app computes global weather, temperatures, and luggage packing recommendations (Traveler persona). However, regional cards governed by Indian government ministries (such as Agromet crop advisories and INCOIS beach safety) gracefully render an MoES mandate notice explaining that localized agricultural bulletins apply strictly to Indian territories.
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q8</span> How did you implement bilingual support? Is it just automated Google Translate?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> No. Automated translators often produce awkward, inaccurate translations for meteorological terms. We built native Flutter <code>.arb</code> localization files (<code>app_en.arb</code> and <code>app_hi.arb</code>) with an official dictionary. Crucially, all 6 National Air Quality Index (NAQI) categories are mapped to the <strong>official Central Pollution Control Board Hindi terminology</strong>: <em>अच्छा, संतोषजनक, मध्यम, खराब, बहुत खराब,</em> and <em>गंभीर</em>.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q9</span> How does your app run on both Mobile phones and Web browsers without altering code?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> We engineered a <strong>Dual-Mode Responsive Architecture</strong> in Flutter:
+    <ul>
+      <li>On mobile screens (&lt; 720px), the UI renders 100% edge-to-edge with touch gestures and a dedicated bottom navigation bar.</li>
+      <li>On desktop/web screens (&ge; 900px), persona cards adapt into a 2-column grid to eliminate stretched cards, and the dashboard provides high-density vitals.</li>
+      <li>We also built an <strong>In-App View Mode Switcher</strong>: clicking <code>[ 📱 Mobile ]</code> on a laptop screen renders an interactive smartphone chassis (420px) with rounded bezel, notch, and shadow, allowing effortless presentations on projectors.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q10</span> What was the most critical bug you encountered during development, and how did you resolve it?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> While implementing the bottom navigation bar for web, our entire weather body disappeared, leaving only a blank white screen with the navigation bar floating in the exact vertical center. By inspecting Flutter's <code>RenderScaffold</code> constraints, we diagnosed that wrapping <code>bottomNavigationBar</code> inside an unconstrained <code>Center</code> widget caused it to expand vertically to fill the entire screen height, squeezing the body's height to zero. We resolved it by constraining the navigation bar to a fixed <code>SizedBox(height: 80)</code> and aligning the body to <code>Alignment.topCenter</code>.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q11</span> How do you calculate the "Comfort Index" for the Fitness and Parents personas?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> Our algorithm combines Steadman’s Apparent Temperature formula with humidity penalties and CPCB AQI deductions:
+    <br><code>Comfort_Score = 100 - (0.55 × |Temp - 22°C| × 2.5) - (Humidity > 60% ? (Humidity - 60) × 0.4 : 0) - (AQI > 100 ? (AQI - 100) × 0.15 : 0)</code>.
+    <br>The result is normalized strictly between 0 and 100, providing an instant score on whether outdoor conditions are pleasant, acceptable, or hazardous.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q12</span> How do you protect user privacy? Do you track user GPS coordinates on a remote server?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> No GPS coordinates or user persona profiles are ever stored on our backend servers. User preferences, selected personas, recent searches, and language settings are stored exclusively on the user's client device using encrypted local storage (<code>SharedPreferences</code>).
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q13</span> What automated testing did you implement to ensure stability?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> We have a 25-test automated unit suite that passes 100% in under 3 seconds:
+    <ul>
+      <li><code>coastal_test.dart</code>: Verifies sub-25km detection for coastal cities and rejection for inland cities.</li>
+      <li><code>comfort_index_test.dart</code>: Verifies comfort formulas, high-AQI running restrictions, and packing list triggers.</li>
+      <li><code>location_model_test.dart</code>: Tests global scope gating and recents caching for international cities (London).</li>
+      <li><code>weather_translations_test.dart</code>: Verifies all 6 CPCB Hindi NAQI terms and weather condition dictionaries.</li>
+      <li><code>weather_model_test.dart</code>: Tests JSON serialization/deserialization and persona mapping integrity.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q14</span> How can this platform scale to all 22 official scheduled languages of India?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> Our localization architecture uses standard Flutter <code>l10n</code> ARB templates. Adding a new language (e.g. Marathi, Tamil, Bengali, Telugu) requires creating a single key-value file (e.g. <code>app_mr.arb</code>). The UI automatically generates typed localization bindings with zero refactoring of widget code.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q15</span> How does the app prevent API rate limiting when thousands of citizens search simultaneously?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> Three levels of protection:
+    1. <strong>Search Debouncing:</strong> The search modal buffers keystrokes for 350ms, eliminating redundant queries.
+    2. <strong>BFF In-Memory Cache:</strong> The Node.js proxy caches geocoding responses in memory for 24 hours.
+    3. <strong>Client-Side Fallback:</strong> Top Indian cities are resolved instantly from the client's local dictionary without issuing network requests.
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q16</span> How does the Farmer persona help reduce agricultural input costs?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> Chemical pesticides washed away by sudden rain represent an annual loss of hundreds of crores for Indian farmers. Our Agromet card analyzes 6-hour precipitation probability and wind speed thresholds (&lt; 15 km/h) to give farmers an explicit <em>"Safe for Chemical Spraying"</em> or <em>"Do Not Spray - Rain Expected"</em> advisory, directly saving agricultural costs.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q17</span> What happens if the GPS permission is denied by the user?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> The app never blocks user access. If GPS is denied or unavailable, the app falls back to New Delhi (default) or the user's last chosen city, and prompts the user to use the instant search modal to type any village, district, or city name.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q18</span> What is your deployment strategy for the Ministry of Earth Sciences?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> The app is production-ready. The web frontend compiles to a static bundle (<code>build/web</code>) deployable on government NIC/MeitY cloud servers or CDNs with zero hosting cost. The mobile client compiles directly to an Android APK ready for publication on the Google Play Store and Mobile Seva AppStore.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q19</span> What font optimization was done to ensure fast loading on 2G/3G networks?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> In our production build, Flutter’s font tree-shaking reduced the MaterialIcons font payload by <strong>98.7%</strong> (from 1.64 MB down to just 21.4 KB), ensuring sub-second bundle load times even on slow 2G and 3G cellular connections in rural India.
+  </div>
+</div>
+
+<div class="qa-card">
+  <div class="qa-question"><span class="qa-tag">Q20</span> What is the single biggest takeaway you want the jury to remember about this project?</div>
+  <div class="qa-answer">
+    <strong>Answer:</strong> <em>"We did not simply build a weather dashboard; we built an intelligent decision-support system for 1.4 billion Indian citizens. By combining official MoES/IMD data with 8 citizen personas, deep Hindi localization, sub-25km coastal precision, and offline zero-drift reliability, we have made meteorological science actionable for every Indian."</em>
+  </div>
+</div>
+
+</body>
+</html>

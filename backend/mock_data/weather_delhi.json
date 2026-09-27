@@ -1,0 +1,131 @@
+{
+  "cityName": "New Delhi",
+  "stateName": "National Capital Territory of Delhi",
+  "latitude": 28.6139,
+  "longitude": 77.209,
+  "isCoastal": false,
+  "lastUpdated": "2026-09-13T16:30:00.000Z",
+  "current": {
+    "temperature": 31.5,
+    "feelsLike": 35.0,
+    "condition": "Hazy Sunshine",
+    "humidity": 65,
+    "uvIndex": 7.8,
+    "windSpeedKmh": 12.0,
+    "windDirection": "WNW",
+    "visibilityKm": 3.2,
+    "pressureHpa": 1010,
+    "sunrise": "06:06 AM",
+    "sunset": "06:31 PM",
+    "tempMax": 34.0,
+    "tempMin": 25.0
+  },
+  "aqi": {
+    "aqi": 238,
+    "pm25": 98.4,
+    "pm10": 182.0,
+    "no2": 44.5,
+    "so2": 14.2,
+    "co": 1.8,
+    "o3": 38.0,
+    "category": "Poor",
+    "healthAdvisory": "Air quality is unhealthy for sensitive groups. Wear N95 masks outdoors."
+  },
+  "pollen": {
+    "count": 42,
+    "level": "Moderate",
+    "treePollen": "Low",
+    "grassPollen": "Moderate",
+    "weedPollen": "Moderate"
+  },
+  "tideSea": null,
+  "outdoorFitness": {
+    "bestRunningHours": [
+      {
+        "timeWindow": "05:30 AM - 06:45 AM",
+        "score": 72,
+        "rating": "Fair",
+        "reason": "Coolest ambient temperature (25°C), but AQI remains elevated."
+      },
+      {
+        "timeWindow": "07:00 PM - 08:30 PM",
+        "score": 65,
+        "rating": "Moderate",
+        "reason": "Post-sunset cooling; traffic pollutants present."
+      }
+    ],
+    "goldenHourMorning": "06:06 AM - 06:45 AM",
+    "goldenHourEvening": "05:50 PM - 06:31 PM",
+    "heatColdAlert": "Heat Caution: High humidity elevates heat index to 35°C."
+  },
+  "traveler": {
+    "savedDestinations": [
+      {
+        "city": "Goa",
+        "temp": 28.5,
+        "condition": "Thunderstorms & Rain",
+        "rainProbability": 80,
+        "alert": "Yellow Alert: Squally winds and heavy downpours along Konkan coast."
+      },
+      {
+        "city": "Shimla",
+        "temp": 18.0,
+        "condition": "Clear & Crisp",
+        "rainProbability": 10,
+        "alert": null
+      }
+    ],
+    "packingSuggestions": [
+      "High AQI alert in Delhi: Carry N95 pollution filter masks",
+      "UV index is High (7.8): Pack SPF 50 sunscreen & sunglasses",
+      "Upcoming Goa trip: Raincoat, umbrella & waterproof footwear essential"
+    ]
+  },
+  "parentsFamilies": {
+    "morningCommute": {
+      "title": "Morning School Bus Window",
+      "timeRange": "07:00 AM - 09:00 AM",
+      "temp": 27.2,
+      "rainProbability": 15,
+      "condition": "Partly Hazy",
+      "advisory": "Minimal rain risk. Keep inhalers accessible for asthmatic children."
+    },
+    "afternoonCommute": {
+      "title": "Afternoon Return Window",
+      "timeRange": "02:00 PM - 04:00 PM",
+      "temp": 33.5,
+      "rainProbability": 25,
+      "condition": "Warm & Humid",
+      "advisory": "Hot & muggy conditions. Ensure students carry insulated hydration bottles."
+    },
+    "outdoorPlaySafety": "Limit intense playground sports to less than 30 minutes due to poor AQI.",
+    "alert": "Air Quality Caution: School physical education classes advised to move indoors."
+  },
+  "agriculture": {
+    "soilMoisturePercent": 54,
+    "rainfallPrediction48hMm": 6.5,
+    "frostAlert": false,
+    "heatwaveAlert": false,
+    "seasonalCropTip": "Pre-Rabi season window: Prepare land beds for early sowing of mustard.",
+    "recommendedAction": "Maintain weed control in standing Kharif crops."
+  },
+  "commuter": {
+    "trafficDelayMins": 22,
+    "trafficStatus": "Heavy Congestion (+22 min)",
+    "visibilityMeters": 3100,
+    "fogStormAlert": "Haze advisory on Outer Ring Road during morning peak hours.",
+    "routeSafety": "Moderate Risk"
+  },
+  "eventPlanner": {
+    "extendedForecast": [
+      {"day": "Today", "date": "Sep 13", "tempMax": 34, "tempMin": 25, "condition": "Hazy Sun", "rainProbability": 20, "comfortScore": 68},
+      {"day": "Sun", "date": "Sep 14", "tempMax": 33, "tempMin": 24, "condition": "Partly Cloudy", "rainProbability": 35, "comfortScore": 72},
+      {"day": "Mon", "date": "Sep 15", "tempMax": 31, "tempMin": 23, "condition": "Thunderstorm", "rainProbability": 75, "comfortScore": 60},
+      {"day": "Tue", "date": "Sep 16", "tempMax": 30, "tempMin": 23, "condition": "Light Rain", "rainProbability": 60, "comfortScore": 74},
+      {"day": "Wed", "date": "Sep 17", "tempMax": 32, "tempMin": 24, "condition": "Sunny", "rainProbability": 15, "comfortScore": 79}
+    ],
+    "comfortIndexScore": 68,
+    "comfortCategory": "Moderate Comfort",
+    "comfortFormulaBreakdown": "Combined: Temp (31.5°C), RH (65%), Wind (12 km/h)"
+  }
+}
