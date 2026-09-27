@@ -2,6 +2,9 @@
 ### Smart India Hackathon (SIH 2026) — Problem Statement PS 26076
 **Ministry of Earth Sciences (MoES) • India Meteorological Department (IMD)**
 
+[![Deploy to GitHub Pages](https://github.com/mehtaaryan1705-rgb/Mausam/actions/workflows/deploy.yml/badge.svg)](https://github.com/mehtaaryan1705-rgb/Mausam/actions/workflows/deploy.yml)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Launch_App-0288D1?style=for-the-badge&logo=flutter)](https://mehtaaryan1705-rgb.github.io/Mausam/)
+
 ---
 
 ## 🌤️ Executive Summary
